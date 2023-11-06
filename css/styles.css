@@ -113,7 +113,7 @@ body {
   text-align: center;
   max-width: 320px;
   margin: 0 auto 72px auto;
-  justify-content: center;
+  text-align: center;
 }
 .filter-button-main {
   font-weight: 500;
@@ -178,10 +178,7 @@ body {
   gap: 72px;
   flex-direction: column;
 }
-.list-feature-calc {
-  flex-basis: calc((100% - 24px) / 2);
-  margin: 0px;
-  padding: 0px;
+
 }
 .logo-studio {
   color: var(--dark);
@@ -789,10 +786,9 @@ body {
 }
 
 /* ================================================= TABLET 👇 ========================================= */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .section-heading {
-    max-width: 1157px;
-    display: block;
+    display: flex;
   }
   .container {
     width: 768px;
@@ -801,8 +797,8 @@ body {
     font-size: 56px;
     letter-spacing: 1.12px;
     line-height: 1.07;
-    width: 496px;
-    text-align: center;
+    max-width: 496px;
+    margin: 0 auto 48px auto;
   }
   .list-team {
     display: flex;
@@ -812,9 +808,16 @@ body {
   }
   .list-feature {
     display: flex;
-    gap: 72px;
-    flex-direction: column;
+    row-gap: 72px;
+    flex-wrap: wrap;
+    column-gap: 24px;
   }
+  .list-feature-calc {
+  flex-basis: calc((100% - 24px) / 2);
+  margin: 0px;
+  padding: 0px;
+}
+
 }
 
 /* ================================================= NOT DESKTOP 👇 ========================================= */

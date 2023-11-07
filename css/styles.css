@@ -66,26 +66,6 @@ body {
   padding: 0 15px 0 15px;
   margin: 0 auto;
 }
-@media screen and (min-width: 428px) {
-  .container {
-    width: 428px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1158px) {
-  .container {
-    width: 1158px;
-  }
-}
-
-/* ================================================= MOBILE 👇 ========================================= */
-@media screen and (max-width: 767px) {
-}
 .section-heading {
   padding: 112px 0;
 
@@ -103,7 +83,43 @@ body {
   background-size: cover;
   margin: 0 auto;
 }
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
+}
+
+.section-heading {
+  padding: 112px 0;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+
+  width: 100%;
+  height: 432px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.list-feature {
+  gap: 72px;
+}
 .heading {
   font-size: 36px;
   font-weight: 700;
@@ -173,13 +189,7 @@ body {
   margin: 0;
   letter-spacing: 0.02em;
 }
-.list-feature {
-  display: flex;
-  gap: 72px;
-  flex-direction: column;
-}
 
-}
 .logo-studio {
   color: var(--dark);
 }
@@ -187,6 +197,7 @@ body {
   background-color: var(--light);
   padding-top: 96px;
   padding-bottom: 96px;
+  align-items: center;
 }
 
 .heading-second-team {
@@ -195,25 +206,20 @@ body {
 
 .list-team {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-
 .team {
   background-color: var(--white-background);
   border-radius: 0px 0px 4px 4px;
-  width: calc((100%-72px) / 4);
+
   margin: 0px;
   padding: 0px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
-
-.team-width {
-  margin: 0px;
-  padding: 0px;
 }
 
 .name-position {
@@ -326,7 +332,6 @@ body {
 
 .heading-flex {
   justify-content: center;
-  max-width: 496px;
 }
 
 .social-media-list {
@@ -386,19 +391,19 @@ body {
 }
 
 .link-footer {
-  display: flex;
+  display: block;
+  margin: 0;
+  text-align: center;
   margin-bottom: 16px;
 }
 .footer-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   justify-content: center;
   column-gap: 24px;
 }
 .container-style {
-  justify-content: center;
 }
 .footer-sm {
   font-family: Roboto;
@@ -457,7 +462,6 @@ body {
   justify-content: center;
   padding: 8px 24px;
   align-items: center;
-
   border-radius: 4px;
   border: none;
   min-width: 165px;
@@ -508,8 +512,8 @@ body {
 }
 .label-subscribe {
   display: flex;
-
   gap: 24px;
+  width: 100%;
 }
 .section-portfolio {
   padding-top: 96px;
@@ -786,38 +790,64 @@ body {
 }
 
 /* ================================================= TABLET 👇 ========================================= */
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-  .section-heading {
-    display: flex;
-  }
+@media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
+  }
+  .section-heading {
+    max-width: 1157px;
   }
   .heading {
     font-size: 56px;
-    letter-spacing: 1.12px;
     line-height: 1.07;
     max-width: 496px;
-    margin: 0 auto 48px auto;
   }
   .list-team {
     display: flex;
-    row-gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 64px;
     flex-wrap: wrap;
     column-gap: 24px;
+  }
+  .team {
+    width: calc((100%-24px) / 2);
   }
   .list-feature {
     display: flex;
-    row-gap: 72px;
     flex-wrap: wrap;
     column-gap: 24px;
+    row-gap: 72px;
+    margin: 0 auto;
+    max-width: 736px;
   }
   .list-feature-calc {
-  flex-basis: calc((100% - 24px) / 2);
-  margin: 0px;
-  padding: 0px;
-}
+    flex-basis: calc((100% - 24px) / 2);
+    margin: 0px;
+    padding: 0px;
+  }
+  .footer-container {
+    max-width: 584px;
+  }
+  .container-style {
+    margin: 0;
+  }
+  .link-footer {
+    text-align: left;
+  }
 
+  .footer-subscribe {
+    text-align: left;
+  }
+  .label-subscribe {
+    width: 264px;
+  }
+  .subscribe {
+    padding: 0 24px;
+  }
+  .subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 /* ================================================= NOT DESKTOP 👇 ========================================= */

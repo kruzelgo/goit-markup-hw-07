@@ -159,7 +159,6 @@ body {
 }
 
 .list-feature {
-  display: flex;
   gap: 24px;
 }
 .list-feature-calc {
@@ -248,11 +247,11 @@ body {
   width: 264px;
 }
 .heading {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  letter-spacing: 1.12px;
+  letter-spacing: 0.02em;
   color: var(--white-background);
-  line-height: 1.07;
+  line-height: 1.11;
   text-align: center;
   width: 496px;
   margin: 0 auto 48px auto;
@@ -405,7 +404,6 @@ body {
   margin-bottom: 72px;
 }
 .list-team {
-  display: flex;
   gap: 24px;
 }
 .team-width {

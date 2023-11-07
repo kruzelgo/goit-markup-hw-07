@@ -377,9 +377,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.feature-icon-box-not-desktop {
-  display: none;
-}
+
 .heading-second-lists {
   display: flex;
   gap: 24px;
@@ -398,7 +396,7 @@ body {
 }
 .footer-container {
   display: flex;
-  flex-direction: row;
+
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 24px;
@@ -474,8 +472,7 @@ body {
   background: var(--pressed-state);
 }
 .subscribe {
-  margin: 0 auto 72px auto;
-  padding-top: 72px;
+  margin-top: 0 auto 72px auto;
 }
 .subscribe-form {
   display: flex;
@@ -485,7 +482,7 @@ body {
   gap: 24px;
 }
 .input-subscribe {
-  min-width: 398px;
+  width: 398px;
   min-height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white-background);
@@ -513,7 +510,6 @@ body {
 .label-subscribe {
   display: flex;
   gap: 24px;
-  width: 100%;
 }
 .section-portfolio {
   padding-top: 96px;
@@ -842,7 +838,7 @@ body {
     width: 264px;
   }
   .subscribe {
-    padding: 0 24px;
+    padding: 0 24px 0 0;
   }
   .subscribe-form {
     flex-direction: row;
@@ -860,6 +856,10 @@ body {
 }
 /* ================================================= DESKTOP 👇 ========================================= */
 @media screen and (min-width: 1158px) {
+  .container {
+    min-width: 1158px;
+    padding: 0;
+  }
   .header {
     border-bottom: 1px solid var(--accent);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -934,11 +934,44 @@ body {
     display: block;
   }
 }
-.container {
-}
+
 .section {
   padding-bottom: 120px;
 }
-.section-what-are-we-doing {
-  display: none;
+
+.logo-link {
+  margin-right: 76px;
+}
+.list-feature-calc {
+  flex-basis: calc((100% - 72px) / 4);
+}
+.list-feature {
+  max-width: 1158px;
+}
+.footer-container {
+  align-items: baseline;
+  max-width: 1160px;
+  column-gap: 0;
+}
+.paragraph-footer {
+  margin-bottom: 0;
+}
+.footer {
+  padding: 100px 0;
+}
+.container-style {
+  margin: 0 120px 0 0;
+}
+.footer-sm {
+  text-align: left;
+}
+.subscribe-form {
+  justify-content: flex-end;
+  margin-left: 80px;
+}
+.input-subscribe {
+  width: 264px;
+}
+.footer-subscribe {
+  margin-left: 80px;
 }

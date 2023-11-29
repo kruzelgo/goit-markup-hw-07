@@ -964,6 +964,9 @@ body {
   .input-subscribe {
     width: 268px;
   }
+  .menu-address:first-child {
+    font-size: 30px;
+  }
 }
 
 /* ================================================= TABLET 👇 ========================================= */
